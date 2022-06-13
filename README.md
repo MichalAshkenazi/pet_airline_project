@@ -86,6 +86,17 @@ To train and evaluate a PET model for one of the supported tasks, simply run the
 	--output_dir $OUTPUT_DIR \
 	--do_train \
 	--do_eval
+
+      for our case:
+    --method pet \
+    --pattern_ids 1 \
+    --data_dir "/Users/michal.ashkenazi/git_rep/pet/airline" \
+    --model_type "roberta" \
+    --model_name_or_path "roberta-base" \
+    --task_name "yelp-polarity" \
+    --output_dir "/Users/michal.ashkenazi/git_rep/pet/outputs" \
+    --do_train \
+    --do_eval
     
  where
  - `$PATTERN_IDS` specifies the PVPs to use. For example, if you want to use *all* patterns, specify `PATTERN_IDS 0 1 2 3 4` for AG's News and Yahoo Questions or `PATTERN_IDS 0 1 2 3` for Yelp Reviews and MNLI.
